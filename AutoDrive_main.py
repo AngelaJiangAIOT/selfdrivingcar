@@ -24,9 +24,9 @@ try:
         img = cv2.GaussianBlur(img,(5,5),0) # step3: 高斯模糊
         img = cv2.equalizeHist(img) # step4: histogram equalization 增亮
         img = img/255 # step5: normalization
-        img = img.reshape(1,120,320,1) # step6: 3D->4D. reshape    
         cv2.imshow('image', img)   #顯示攝影機讀取的影像 並命名為'image'
-        
+        img = img.reshape(1,120,320,1) # step6: 3D->4D. reshape    
+           
         prediction = model.predict(img) # 預測標籤 0,1,2
         sensor_data = s.get_distance() # 取得超音波資料(距離cm)
         

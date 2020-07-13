@@ -22,8 +22,8 @@ try:
         img = img[120:240, :] # step 1: 取下半部 (之後要做道路辨識用)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # step2: 將圖片轉成灰階
         img = cv2.GaussianBlur(img,(5,5),0) # step3: 高斯模糊
-        img = cv2.equalizeHist(img) # step4: histogram equalization 增亮
-        img = img/255 # step5: normalization
+        # img = cv2.equalizeHist(img) # step4: histogram equalization 增亮
+        # img = img/255 # step5: normalization
         img = img.reshape(1,120,320,1) # step6: 3D->4D. reshape    
         cv2.imshow('image', img)   #顯示攝影機讀取的影像 並命名為'image'
         

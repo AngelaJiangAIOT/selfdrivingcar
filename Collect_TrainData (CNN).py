@@ -49,7 +49,7 @@ try:
         roi = cam[120:240, :]  # roi = 120*320 = 38400
         gray = cv2.cvtColor(roi,cv2.COLOR_RGB2GRAY)
         gauss = cv2.GaussianBlur(gray,(3,3),0)
-        img = cv2.equalizeHist(gauss)
+        # img = cv2.equalizeHist(gauss)
 #         img = gauss/255 #normalization  像素介於0~1之間
         cv2.imshow('img',gauss)
         img = gauss.reshape(1,120,320,1)

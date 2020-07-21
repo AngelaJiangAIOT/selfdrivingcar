@@ -5,7 +5,7 @@ import time
 class SuperSonic:
     
 
-    def __init__(self,trigger_pin = 17,echo_pin = 27):
+    def __init__(self,trigger_pin = 8,echo_pin = 7):
         self.trigger_pin = trigger_pin
         self.echo_pin = echo_pin
     
